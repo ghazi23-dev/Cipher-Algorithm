@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chiffrement de César</title>
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#" id="chiffrementTab">Chiffrement</a></li>
+            <li><a href="#" id="dechiffrementTab">Déchiffrement</a></li>
+            <li><a href="#" id="cryptographieTab">Cryptanalyse</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div id="chiffrementView">
+            <h1>Chiffrement de César</h1>
+            <label for="key">Clé de Chiffrement (N) :</label>
+            <input type="number" id="key" placeholder="Entrez un nombre" max="25" min="1"/>
+            <input type="file" id="fileInput" accept=".txt" />
+            <button id="encryptButton">Chiffrer</button>
+            <a id="downloadLink" style="display: none;" download="message_crypte.txt">Télécharger le fichier crypté</a>
+            <div id="result"></div>
+        </div>
+        <div id="dechiffrementView" style="display: none;">
+            <h1>Déchiffrement de César</h1>
+            <label for="keyDecryption">Clé de Déchiffrement (N) :</label>
+            <input type="number" id="keyDecryption" placeholder="Entrez la clé de déchiffrement" />
+            <input type="file" id="fileInputDecryption" accept=".txt" />
+            <button id="decryptButton">Déchiffrer</button>
+            <a id="downloadLinkDecryption" style="display: none;" download="message_dechiffre.txt">Télécharger le fichier déchiffré</a>
+            <div id="resultDecryption"></div>
+        </div>
+        <div id="cryptanalyseview" style="display: none;">
+            <h1>cryptanalyse</h1>
+            <input type="file" id="fileCryptanalyse" accept=".txt" />
+            <button id="cryptanalyseBtn">cryptanalyse</button>
+            <a id="downloadLinkCryptanalyse" style="display: none;" download="message_dechiffre.txt">Télécharger le fichier déchiffré</a>
+            <div id="resultCryptanalyse"></div>
+        </div>
+       
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
